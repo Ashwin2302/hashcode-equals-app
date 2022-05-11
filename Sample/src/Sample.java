@@ -7,10 +7,9 @@ public class Sample {
 
 
     private static void isEqual(Student student1, Student student2) {
-        int result = (student1.hashCode() == student2.hashCode()) ? (student1.getScore() + student2.getScore()):0;
+        int result = (student1.equals(student2)) ? (student1.getScore() + student2.getScore()):0;
         System.out.println("hashcode of student1 = " + student1.hashCode());
         System.out.println("hashcode of student2 = " + student2.hashCode());
-        System.out.println("Comparing objects student1 and student2 = " + student1.equals(student2));
         System.out.println("Total Score ="+result);
     }
 }
